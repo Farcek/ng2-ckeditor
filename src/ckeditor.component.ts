@@ -67,7 +67,11 @@ export class CKEditorComponent implements OnChanges, AfterViewInit {
   @Input() set value(v) {
     if (v !== this._value) {
       this._value = v;
+
+      
       this.onChange(v);
+
+      this.instance.setData(v);
     }
   }
 
